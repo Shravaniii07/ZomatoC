@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Details | Zomato</title>
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+
+<!-- BACK BUTTON -->
+<div class="back">
+    <a href="javascript:history.back()">⬅ Back</a>
+</div>
+
+<div class="booking-bar">
+  <a href="book.html">
+      <button onclick="openBooking()">Book a Table</button>
+      </a>
+      <button id="get-directions-btn" style="margin-left: 10px; padding: 10px 20px; background: #e23744; color: white; border: none; border-radius: 5px; cursor: pointer;">Get Directions</button>
+</div>
+
+
+<!-- MAIN INFO -->
+<section class="resto-header">
+    <h1>Flo - The Brewing Club</h1>
+    <p>Bar Food - Chinese - Fast Food - Biryani  • ₹3000 for two</p>
+</section>
+
+<!-- RATINGS & LOCATION -->
+<section class="resto-stats">
+    <div>
+        <h2>⭐ 4.4</h2>
+        <p>90 Reviews</p>
+    </div>
+    <div>
+        <h2>📍 Pune, Hinjawadi</h2>
+        <p>Open: 12:00 PM – 12:30 AM</p>
+    </div>
+</section>
+<br>
+<center>
+  <div>
+        <h2>Hinjawadi</h2>
+       
+    </div> </center>
+
+<!-- PHOTO SHOWCASE -->
+<section class="resto-photos">
+    <img src="images/flo1.jpg" alt="Restaurant Photo">
+    <img src="images/flo.avif" alt="Restaurant Photo">
+    <img src="images/flo2.jpg" alt="Restaurant Photo">
+    <img src="images/flo3.jpg" alt="Restaurant Photo">
+        <img src="images/flo1.jpg" alt="Restaurant Photo">
+            <img src="images/flo2.jpg" alt="Restaurant Photo">
+</section>
+
+<!-- MENU LIST -->
+<section class="resto-menu">
+    <h2>Menu</h2>
+
+    <div class="menu-item">
+        <span>Pizza</span> <span>₹540</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Dessert</span> <span>₹890</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Salad</span> <span>₹1000</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Chilli Panner</span> <span>₹400</span>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="resto-reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="review">
+        <p><strong>Shraddha:</strong> Great food!</p>
+        <span>⭐ 4.0</span>
+    </div>
+
+    <div class="review">
+        <p><strong>Rakesh:</strong> Loved the Restraurant!</p>
+        <span>⭐ 4.1</span>
+    </div>
+</section>
+
+<div id="bookingModal" class="booking-modal">
+    <div class="booking-box">
+        <h2>Book a Table</h2>
+
+        <input type="date" required>
+        <input type="time" required>
+
+        <select>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5+ Guests</option>
+        </select>
+
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <button onclick="confirmBooking()">Confirm Booking</button>
+        <p onclick="closeBooking()" class="close">Cancel</p>
+    </div>
+</div>
+
+
+<p id="info"><b>Related to Flo - The Brewing Club, Hinjawadi</b>
+    <br>
+Restaurants in Pune, Pune Restaurants, Hinjawadi restaurants, Best Hinjawadi restaurants, Pimpri Chinchwad Area restaurants, Bar in Pune, Bar near me, Bar in Hinjawadi, in Pune, near me, in Hinjawadi, New Year Parties in Pune, Christmas' Special in Pune
+<br><br>
+<b>Restaurants around Hinjawadi</b><br>
+Expressway restaurants, Mahalunge restaurants, Wakad restaurants, Dange Chowk restaurants
+<br><br>
+<b>Frequent searches leading to this page</b>
+<br>
+flo - the brewing club menu, flo - the brewing club hinjawadi menu, flo - the brewing club pune, flo - the brewing club pune menu, flo - the brewing club restaurant</p>
+
+<script src="directions.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pizza Hut — Order Online</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+
+    <!-- RESTAURANT HEADER -->
+    <div class="order-header">
+        <h1>Pizza Hut</h1>
+        <p>Pizza, Fast Food • ₹250 for one</p>
+        <div class="stats">
+            <span class="rating">⭐ 4.4</span>
+            <span class="delivery-time">• 25 min</span>
+        </div>
+    </div>
+
+    <!-- SEARCH & CATEGORIES -->
+    <div class="order-tools">
+        <input type="text" id="menu-search" placeholder="Search in menu..." oninput="filterMenu()">
+
+        <!-- <div class="menu-categories">
+        <div class="cat active" onclick="showCategory('all')">All</div>
+        <div class="cat" onclick="showCategory('exclusive')">Exclusive</div>
+        <div class="cat" onclick="showCategory('sourdough')">Sourdough</div>
+        <div class="cat" onclick="showCategory('pizzaMania')">Pizza Mania</div>
+        <div class="cat" onclick="showCategory('cheeseBurst')">Cheese Burst</div>
+    </div> -->
+    </div>
+
+    <!-- MENU -->
+    <div class="menu-list" id="menuList">
+
+        <!-- Example Menu Item -->
+        <div class="menu-item" data-cat="exclusive">
+            <img src="images/pizza.jpg">
+            <div class="details">
+                <h3>Sourdough Pizza</h3>
+                <p>Delightful combination of Classic Italian style</p>
+                <span>₹299</span>
+            </div>
+            <button onclick="addToCart('Sourdough', 299)">Add</button>
+        </div>
+
+        <div class="menu-item" data-cat="sourdough">
+            <img src="images/momopizza.jpg">
+            <div class="details">
+                <h3>Momo Pizza</h3>
+                <p>Momos Style</p>
+                <span>₹399</span>
+            </div>
+            <button onclick="addToCart('momopizza', 399)">Add</button>
+        </div>
+
+
+        <div class="menu-item" data-cat="sourdough">
+            <img src="images/phut.avif">
+            <div class="details">
+                <h3>Pizza Hut Special</h3>
+                <p>Gourment Style</p>
+                <span>₹399</span>
+            </div>
+            <button onclick="addToCart('Gourment', 399)">Add</button>
+        </div>
+
+        <div class="menu-item" data-cat="sourdough">
+            <img src="images/vegie.jpg">
+            <div class="details">
+                <h3>Vegie Pizza</h3>
+                <p>Vegies</p>
+                <span>₹259</span>
+            </div>
+            <button onclick="addToCart('Veg Pizza', 259)">Add</button>
+        </div>
+
+        <div class="menu-item" data-cat="sourdough">
+            <img src="images/breadsticks.jpg">
+            <div class="details">
+                <h3>Bread Sticks</h3>
+                <p>Classic Style</p>
+                <span>₹239</span>
+            </div>
+            <button onclick="addToCart('BreadSticks', 239)">Add</button>
+        </div>
+
+    </div>
+
+
+    <div class="cart-summary">
+        <h2>Your Cart</h2>
+        <ul id="cartItems"></ul>
+        <p>Total: ₹<span id="cartTotal">0</span></p>
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="storage.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Domino’s Pizza — Order Online</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+<!-- RESTAURANT HEADER -->
+<div class="order-header">
+    <h1>Belgium Waffle</h1>
+    <p>Waffle, Fast Food • ₹200 for one</p>
+    <div class="stats">
+        <span class="rating">⭐ 4.5</span>
+        <span class="delivery-time">• 25 min</span>
+    </div>
+</div>
+
+<!-- SEARCH & CATEGORIES -->
+<div class="order-tools">
+    <input type="text" id="menu-search" placeholder="Search in menu..." oninput="filterMenu()">
+
+    <!-- <div class="menu-categories">
+        <div class="cat active" onclick="showCategory('all')">All</div>
+        <div class="cat" onclick="showCategory('exclusive')">Exclusive</div>
+        <div class="cat" onclick="showCategory('sourdough')">Sourdough</div>
+        <div class="cat" onclick="showCategory('pizzaMania')">Pizza Mania</div>
+        <div class="cat" onclick="showCategory('cheeseBurst')">Cheese Burst</div>
+    </div> -->
+</div>
+
+<!-- MENU -->
+<div class="menu-list" id="menuList">
+
+    <!-- Example Menu Item -->
+    <div class="menu-item" data-cat="exclusive">
+        <img src="images/waf.jpg">
+        <div class="details">
+            <h3>Classic Waffle</h3>
+            <p>Delightful combination of Classic taste</p>
+            <span>₹299</span>
+        </div>
+        <button onclick="addToCart('Classic Waffle', 239)">Add</button>
+    </div>
+
+    <div class="menu-item" data-cat="sourdough">
+        <img src="images/waf2.webp">
+        <div class="details">
+            <h3>Belgium Dark Choclate Waffle</h3>
+            <p>Dark Belgium</p>
+            <span>₹349</span>
+        </div>
+        <button onclick="addToCart('Dark Belgium', 349)">Add</button>
+    </div>
+
+    <div class="menu-item" data-cat="sourdough">
+        <img src="images/waf3.jpg">
+        <div class="details">
+            <h3>Belgium Milk Choclate Waffle</h3>
+            <p>Milk Belgium,With Fruits</p>
+            <span>₹389</span>
+        </div>
+        <button onclick="addToCart('Milk Belgium', 349)">Add</button>
+    </div>
+
+    <div class="menu-item" data-cat="sourdough">
+        <img src="images/waf4.avif">
+        <div class="details">
+            <h3>White Fantasy Waffle</h3>
+            <p>Milk, Dark Belgium</p>
+            <span>₹349</span>
+        </div>
+        <button onclick="addToCart('White Fantasy Belgium', 349)">Add</button>
+    </div>
+    
+</div>
+
+
+<div class="cart-summary">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p>Total: ₹<span id="cartTotal">0</span></p>
+    <button onclick="placeOrder()">Place Order</button>
+</div>
+
+<script src="data.js"></script>
+<script src="restaurant.js"></script>
+<script src="order.js"></script>
+</body>
+</html>

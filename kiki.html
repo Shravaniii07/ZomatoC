@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Details | Zomato</title>
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+
+<!-- BACK BUTTON -->
+<div class="back">
+    <a href="javascript:history.back()">⬅ Back</a>
+</div>
+
+<div class="booking-bar">
+<a href="book.html">
+    <button onclick="openBooking()">Book a Table</button>
+    </a>
+</div>
+
+
+<!-- MAIN INFO -->
+<section class="resto-header">
+    <h1>Kiki – Sangamvadi</h1>
+    <p>North Indian, Chinese • ₹900 for two</p>
+</section>
+
+<!-- RATINGS & LOCATION -->
+<section class="resto-stats">
+    <div>
+        <h2>⭐ 4.4</h2>
+        <p>182 Reviews</p>
+    </div>
+    <div>
+        <h2>📍 Pune, Sangamvadi</h2>
+        <p>Open: 12:00 PM – 11:00 PM</p>
+    </div>
+</section>
+
+<!-- PHOTO SHOWCASE -->
+<section class="resto-photos">
+    <img src="images/kiki.avif" alt="Restaurant Photo">
+    <img src="images/kiki1.avif" alt="Restaurant Photo">
+    <img src="images/kiki2.avif" alt="Restaurant Photo">
+    <img src="images/kiki3.avif" alt="Restaurant Photo">
+        <img src="images/kiki1.avif" alt="Restaurant Photo">
+            <img src="images/kiki.avif" alt="Restaurant Photo">
+</section>
+
+<!-- MENU LIST -->
+<section class="resto-menu">
+    <h2>Menu</h2>
+
+    <div class="menu-item">
+        <span>Paneer Tikka</span> <span>₹280</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Chilli Paneer</span> <span>₹260</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Veg Fried Rice</span> <span>₹180</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Butter Naan</span> <span>₹40</span>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="resto-reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="review">
+        <p><strong>Rohan:</strong> Great food and quick service!</p>
+        <span>⭐ 4.5</span>
+    </div>
+
+    <div class="review">
+        <p><strong>Priya:</strong> Loved the ambience and flavours!</p>
+        <span>⭐ 4.2</span>
+    </div>
+</section>
+
+<div id="bookingModal" class="booking-modal">
+    <div class="booking-box">
+        <h2>Book a Table</h2>
+
+        <input type="date" required>
+        <input type="time" required>
+
+        <select>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5+ Guests</option>
+        </select>
+
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <button onclick="confirmBooking()">Confirm Booking</button>
+        <p onclick="closeBooking()" class="close">Cancel</p>
+    </div>
+</div>
+
+
+<p id="info">
+    <b>Related to Kiki, Sangamvadi</b>
+    <br>
+Restaurants in The Mills, Bund Garden Road, Restaurants in Pune, Pune Restaurants, Sangamvadi restaurants, Best Sangamvadi restaurants, KP and Kalyani restaurants, Bar Food Restaurants in Pune, Bar Food near me, Bar Food Restaurants in Sangamvadi, Casual Dining in Pune, Casual Dining near me, Casual Dining in Sangamvadi, Bar in Pune, Bar near me, Bar in Sangamvadi, New Year Parties in Pune, Christmas' Special in Pune
+<br><br>
+<b>Restaurants around Sangamvadi</b>
+<br>
+Dhole Patil Road restaurants, Bund Garden Road restaurants, Koregaon Park restaurants, Camp Area restaurants
+<br><br>
+<b>Frequent searches leading to this page</b>
+<br>
+kiki menu, kiki sangamvadi menu, kiki pune, kiki pune menu, kiki restaurant</p>
+
+</body>
+</html>

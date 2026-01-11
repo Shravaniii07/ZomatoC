@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Details | Zomato</title>
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+
+<!-- BACK BUTTON -->
+<div class="back">
+    <a href="javascript:history.back()">⬅ Back</a>
+</div>
+
+<div class="booking-bar">
+<a href="book.html"> 
+    <button onclick="openBooking()">Book a Table</button>
+    </a>
+</div>
+
+
+<!-- MAIN INFO -->
+<section class="resto-header">
+    <h1>Loco Otro - Aundh</h1>
+    <p>North Indian</p>
+</section>
+
+<!-- RATINGS & LOCATION -->
+<section class="resto-stats">
+    <div>
+        <h2>⭐ 4.4</h2>
+        <p>170 Reviews</p>
+    </div>
+    <div>
+        <h2>📍 Pune, Sangamvadi</h2>
+        <p>Open: 12:00 PM – 11:00 PM</p>
+    </div>
+</section>
+<br>
+<center>
+  <div>
+        <h2>2nd Floor, Anand HSG Society</h2>
+        <p>Rupees 1500 for two</p>
+    </div> </center>
+
+<!-- PHOTO SHOWCASE -->
+<section class="resto-photos">
+    <img src="images/loco.avif" alt="Restaurant Photo">
+    <img src="images/loco1.jpg" alt="Restaurant Photo">
+    <img src="images/loco2.avif" alt="Restaurant Photo">
+    <img src="images/lco3.avif" alt="Restaurant Photo">
+        <img src="images/loco.avif" alt="Restaurant Photo">
+            <img src="images/loco1.jpg" alt="Restaurant Photo">
+</section>
+
+<!-- MENU LIST -->
+<section class="resto-menu">
+    <h2>Menu</h2>
+
+    <div class="menu-item">
+        <span>Paneer Tikka</span> <span>₹240</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Chilli Paneer</span> <span>₹290</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Butter Chicken</span> <span>₹200</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Butter Naan</span> <span>₹40</span>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="resto-reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="review">
+        <p><strong>Riya:</strong> Great food and quick service!</p>
+        <span>⭐ 4.0</span>
+    </div>
+
+    <div class="review">
+        <p><strong>Nitin:</strong> Loved the ambience and flavours!</p>
+        <span>⭐ 4.1</span>
+    </div>
+</section>
+
+<div id="bookingModal" class="booking-modal">
+    <div class="booking-box">
+        <h2>Book a Table</h2>
+
+        <input type="date" required>
+        <input type="time" required>
+
+        <select>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5+ Guests</option>
+        </select>
+
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <button onclick="confirmBooking()">Confirm Booking</button>
+        <p onclick="closeBooking()" class="close">Cancel</p>
+    </div>
+</div>
+
+
+<p id="info">
+    <b>Related to Loco Otro, Aundh</b>
+    <br>
+Restaurants in Pune, Pune Restaurants, Aundh restaurants, Best Aundh restaurants, SB Road - Aundh restaurants, Bar in Pune, Bar near me, Bar in Aundh, Casual Dining in Pune, Casual Dining near me, Casual Dining in Aundh, Order food online in Aundh, Order food online in Pune, New Year Parties in Pune, Christmas' Special in Pune
+<br><br>
+<b>Restaurants around Aundh</b>
+<br>
+Pune University restaurants, Pimple Gurav restaurants, Pashan restaurants, Baner restaurants
+<br><br>
+<b>Frequent searches leading to this page</b>
+<br>
+loco otro menu, loco otro aundh menu, loco otro pune, loco otro pune menu, loco otro restaurant</p>
+
+</body>
+</html>

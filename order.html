@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Domino’s Pizza — Order Online</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+<!-- RESTAURANT HEADER -->
+<div class="order-header">
+    <h1>Domino’s Pizza</h1>
+    <p>Pizza, Fast Food • ₹400 for one</p>
+    <div class="stats">
+        <span class="rating">⭐ 4.1</span>
+        <span class="delivery-time">• 25 min</span>
+    </div>
+</div>
+
+<!-- SEARCH & CATEGORIES -->
+<div class="order-tools">
+    <input type="text" id="menu-search" placeholder="Search in menu..." oninput="filterMenu()">
+
+    <!-- <div class="menu-categories">
+        <div class="cat active" onclick="showCategory('all')">All</div>
+        <div class="cat" onclick="showCategory('exclusive')">Exclusive</div>
+        <div class="cat" onclick="showCategory('sourdough')">Sourdough</div>
+        <div class="cat" onclick="showCategory('pizzaMania')">Pizza Mania</div>
+        <div class="cat" onclick="showCategory('cheeseBurst')">Cheese Burst</div>
+    </div> -->
+</div>
+
+<!-- MENU -->
+<div class="menu-list" id="menuList">
+
+    <!-- Example Menu Item -->
+    <div class="menu-item" data-cat="exclusive">
+        <img src="images/dom.avif">
+        <div class="details">
+            <h3>Farmhouse Pizza</h3>
+            <p>Delightful combination of veggies & cheese</p>
+            <span>₹299</span>
+        </div>
+        <button onclick="addToCart('Farmhouse Pizza', 299)">Add</button>
+    </div>
+
+    <div class="menu-item" data-cat="sourdough">
+        <img src="images/pizza.jpg">
+        <div class="details">
+            <h3>Sourdough Classic Veg</h3>
+            <p>Airy crust with rich cheese flavors</p>
+            <span>₹349</span>
+        </div>
+        <button onclick="addToCart('Sourdough Classic Veg', 349)">Add</button>
+    </div>
+
+    
+</div>
+
+
+<div class="cart-summary">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p>Total: ₹<span id="cartTotal">0</span></p>
+    <button onclick="placeOrder()">Place Order</button>
+</div>
+
+<script src="data.js"></script>
+<script src="restaurant.js"></script>
+<script src="order.js"></script>
+</body>
+</html>

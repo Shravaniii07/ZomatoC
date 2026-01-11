@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Details | Zomato</title>
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+
+<!-- BACK BUTTON -->
+<div class="back">
+    <a href="javascript:history.back()">⬅ Back</a>
+</div>
+
+<div class="booking-bar">
+   <a href="book.html">
+     <button onclick="openBooking()">Book a Table</button>
+    </a>
+    </div>
+
+
+<!-- MAIN INFO -->
+<section class="resto-header">
+    <h1>24K Kraft Brewzz</h1>
+    <p>Chinese - North Indian - Italian - Beverages  • ₹2500 for two</p>
+</section>
+
+<!-- RATINGS & LOCATION -->
+<section class="resto-stats">
+    <div>
+        <h2>⭐ 4.5</h2>
+        <p>120 Reviews</p>
+    </div>
+    <div>
+        <h2>📍 Pune, Balewadi</h2>
+        <p>Open: 12:00 Noon</p>
+    </div>
+</section>
+<br>
+<!-- <center>
+  <div>
+        <h2>Sangamwadi</h2>
+       
+    </div> </center> -->
+
+<!-- PHOTO SHOWCASE -->
+<section class="resto-photos">
+    <img src="images/24kraft.avif" alt="Restaurant Photo">
+    <img src="images/kraft3.webp" alt="Restaurant Photo">
+    <img src="images/kraft4.jpg" alt="Restaurant Photo">
+    <img src="images/kraft1.avif" alt="Restaurant Photo">
+        <img src="images/kraft2.avif" alt="Restaurant Photo">
+            <img src="images/24kraft.avif" alt="Restaurant Photo">
+</section>
+
+<!-- MENU LIST -->
+<section class="resto-menu">
+    <h2>Menu</h2>
+
+    <div class="menu-item">
+        <span>North Indian</span> <span>₹1000</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Fast Food</span> <span>₹3000</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Desserts</span> <span>₹2500</span>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="resto-reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="review">
+        <p><strong>Neha:</strong> Great ambience!</p>
+        <span>⭐ 4.3</span>
+    </div>
+
+    <div class="review">
+        <p><strong>Yash:</strong> Loved the Location!</p>
+        <span>⭐ 4.4</span>
+    </div>
+</section>
+
+<div id="bookingModal" class="booking-modal">
+    <div class="booking-box">
+        <h2>Book a Table</h2>
+
+        <input type="date" required>
+        <input type="time" required>
+
+        <select>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5+ Guests</option>
+        </select>
+
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <button onclick="confirmBooking()">Confirm Booking</button>
+        <p onclick="closeBooking()" class="close">Cancel</p>
+    </div>
+</div>
+
+
+<p id="info"><b>
+  Related to 24K Kraft Brewzz, Balewadi</b>
+  <br>
+Restaurants in Pune, Pune Restaurants, Balewadi restaurants, Best Balewadi restaurants, SB Road - Aundh restaurants, Microbrewery in Pune, Microbrewery near me, Microbrewery in Balewadi, in Pune, near me, in Balewadi, Order food online in Balewadi, Order food online in Pune, New Year Parties in Pune, Christmas' Special in Pune
+<br><br>
+<b>Restaurants around Balewadi</b>
+<br
+Pimple Nilakh restaurants, Baner restaurants, Mahalunge restaurants, Wakad restaurants
+Frequent searches leading to this page
+24k kraft brewzz menu, 24k kraft brewzz balewadi menu, 24k kraft brewzz pune, 24k kraft brewzz pune menu, 24k kraft brewzz restaurant
+</p>
+
+</body>
+</html>

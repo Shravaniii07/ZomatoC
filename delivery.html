@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delivery | Zomato</title>
+    <link rel="stylesheet" href="delivery.css">
+</head>
+
+<body>
+
+    <!-- TOP CATEGORY BAR -->
+    <div class="top-categories">
+        <a href="delivery.html">
+            <div class="cat active">Delivery</div>
+        </a>
+        <a href="dining.html">
+            <div class="cat">Dining Out</div>
+        </a>
+        <a href="nightlife.html">
+            <div class="cat">Nightlife</div>
+        </a>
+    </div>
+
+    <br>
+  <a href="index.html" >
+      <p style="text-align: right;">Logout</p>
+      </a>
+
+    <!-- FOOD CATEGORY SECTION -->
+    <h2 class="section-title">Inspiration for your first order</h2>
+
+    <div class="food-categories">
+        <div class="food-card" data-category="Pizza">
+            <img src="images/pizza.jpg">
+            <p>Pizza</p>
+        </div>
+        <div class="food-card" data-category="Biryani">
+            <img src="images/biryani.avif">
+            <p>Biryani</p>
+        </div>
+        <div class="food-card" data-category="North Indian">
+            <img src="images/North.jpg">
+            <p>North Indian</p>
+        </div>
+        <div class="food-card" data-category="Chicken">
+            <img src="images/kfc.webp">
+            <p>Chicken</p>
+        </div>
+        <div class="food-card" data-category="Burger">
+            <img src="images/burger.jpg">
+            <p>Burger</p>
+        </div>
+        <div class="food-card" data-category="Chinese">
+            <img src="images/chinese.avif">
+            <p>Chinese</p>
+        </div>
+        <div class="food-card" data-category="Rolls">
+            <img src="images/rolls.avif">
+            <p>Rolls</p>
+        </div>
+        <div class="food-card" data-category="Cake">
+            <img src="images/cake.avif">
+            <p>Cake</p>
+        </div>
+        <div class="food-card" data-category="Sandwich">
+            <img src="images/sandwhich.jpg">
+            <p>Sandwich</p>
+        </div>
+        <div class="food-card" data-category="Taco">
+            <img src="images/taco.jpg">
+            <p>Taco</p>
+        </div>
+    </div>
+
+    <!-- FILTER BUTTONS -->
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="rating4">Rating 4+</button>
+        <button class="filter-btn" data-filter="pureveg">Pure Veg</button>
+        <button class="filter-btn" data-filter="opennow">Open Now</button>
+        <button class="filter-btn" data-filter="pricelow">Price Low to High</button>
+    </div>
+
+    <!-- RESTAURANTS -->
+    <h2 class="section-title">Delivery Restaurants in Pune</h2>
+
+    <div class="restaurant-list">
+
+        <div class="restaurant-card" data-rating="4.2" data-veg="false" data-category="Pizza" data-open="true"
+            data-price="250">
+            <a href="pizzahut.html">
+                <img src="images/phut.avif">
+                <div class="info">
+                    <h3>Pizza Hut</h3>
+                    <p>Pizza, Fast Food</p>
+                    <span>⭐ 4.2</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="restaurant-card" data-rating="4.9" data-veg="false" data-category="Burger" data-open="true"
+            data-price="200">
+            <a href="mcd.html">
+                <img src="images/mcd.avif">
+                <div class="info">
+                    <h3>Mc Donalds</h3>
+                    <p>Burger, Fast Food</p>
+                    <span>⭐ 4.9</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="restaurant-card" data-rating="4.5" data-veg="true" data-category="Desserts" data-open="true"
+            data-price="150">
+            <a href="belgium.html">
+                <img src="images/belgian.webp">
+                <div class="info">
+                    <h3>Belgium Waffle</h3>
+                    <p>Waffle</p>
+                    <span>⭐ 4.5</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="restaurant-card" data-rating="4.3" data-veg="false" data-category="Rolls" data-open="true"
+            data-price="120">
+            <a href="mania.html">
+                <img src="images/rolls.avif">
+                <div class="info">
+                    <h3>Rolls Mania</h3>
+                    <p>Rolls, Fast Food</p>
+                    <span>⭐ 4.3</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="restaurant-card" data-rating="4.3" data-veg="false" data-category="Taco" data-open="true"
+            data-price="180">
+            <a href="tacobell.html">
+                <img src="images/tacobell.avif">
+                <div class="info">
+                    <h3>Taco Bell</h3>
+                    <p>Taco's, Fast Food</p>
+                    <span>⭐ 4.3</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="restaurant-card" data-rating="4.3" data-veg="false" data-category="Pizza" data-open="true"
+            data-price="400">
+            <a href="order.html">
+                <img src="images/dom.avif">
+                <div class="info">
+                    <h3>Dominos Pizza</h3>
+                    <p>Pizza, Fast Food</p>
+                    <span>⭐ 4.3</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="restaurant-card" data-rating="4.0" data-veg="true" data-category="Cake" data-open="true"
+            data-price="300">
+            <a href="cakedior.html"> <img src="images/cakedior.avif">
+                <div class="info">
+                    <h3>Cake Dior,koregaon Park</h3>
+                    <p>Cakes</p>
+                    <span>⭐ 4.0</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="restaurant-card" data-rating="4.3" data-veg="true" data-category="North Indian" data-open="false"
+            data-price="350">
+            <a href="bhog">
+                <img src="images/maharajabhog.avif">
+                <div class="info">
+                    <h3>maharaja Bhog</h3>
+                    <p>North Indian Food</p>
+                    <span>⭐ 4.3</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="restaurant-card" data-rating="4.1" data-veg="false" data-category="Burger" data-open="true"
+            data-price="220">
+            <a href="bk.html"> <img src="images/burgerking.avif">
+                <div class="info">
+                    <h3>Burger King</h3>
+                    <p>Burger, Beverages</p>
+                    <span>⭐ 4.1</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="restaurant-card" data-rating="4.3" data-veg="false" data-category="Biryani" data-open="true"
+            data-price="280">
+            <a href="behrouz.html"> <img src="images/behrouz.avif">
+                <div class="info">
+                    <h3>Behrouz Biryani</h3>
+                    <p>Biryani, Mughlai</p>
+                    <span>⭐ 4.3</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="restaurant-card" data-rating="4.3" data-veg="false" data-category="Chinese" data-open="true"
+            data-price="200">
+            <a href="wonk.html">
+                <img src="images/wonk.jpg">
+                <div class="info">
+                    <h3>Chinese Wonk</h3>
+                    <p>Chinese</p>
+                    <span>⭐ 4.3</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="restaurant-card" data-rating="4.3" data-veg="false" data-category="Sandwich" data-open="false"
+            data-price="150">
+            <a href="what.html"><img src="images/san.avif">
+                <div class="info">
+                    <h3>What' A Sandwich</h3>
+                    <p>Biryani, Mughlai</p>
+                    <span>⭐ 4.3</span>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="zomato-footer">
+
+        <div class="footer-top">
+            <h1 class="footer-logo">Zomato</h1>
+
+            <div class="footer-buttons">
+                <button>🌍 India</button>
+                <button>🌐 English</button>
+            </div>
+        </div>
+        <br>
+        <hr>
+
+        <div class="footer-links">
+
+            <div class="footer-column">
+                <h4>ABOUT ZOMATO</h4>
+                <a href="#">Who We Are</a>
+                <a href="#">Blog</a>
+                <a href="#">Careers</a>
+                <a href="#">Report Fraud</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>ZOMAVERSE</h4>
+                <a href="https://www.zomato.com/pune/restaurants">Zomato</a>
+                <a href="https://blinkit.com/">Blinkit</a>
+                <a href="https://www.district.in/">District</a>
+                <a href="https://www.feedingindia.org/">Feeding India</a>
+                <a href="https://www.hyperpure.com/">Hyperpure</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>FOR RESTAURANTS | FOR DELIVERY PARTNERS</h4>
+                <a href="#">Partner With Us</a>
+                <a href="">Restraurant Consulting</a>
+                <a href="https://www.zomato.com/">Apps For You</a>
+            </div>
+            <div class="social">
+                <h4>SOCIAL LINKS</h4>
+                <a href="https://www.instagram.com/zomato/"><img src="instagram (1).png"
+                        style="height:20px; width: 20px;" />
+                </a>
+                <a href="https://www.youtube.com/zomato"><img src="youtube.png" style="height:20px; width: 20px;" />
+                </a>
+                <a href="https://x.com/zomato"><img src="twitter.png" style="height:20px; width: 20px;" />
+                </a>
+                <a href="https://in.linkedin.com/company/zomato"><img src="linkedin.png"
+                        style="height:20px; width: 20px;" />
+                </a>
+            </div>
+
+            <div class="footer-column">
+                <h4>LEARN MORE</h4>
+                <a href="#">Privacy</a>
+                <a href="#">Security</a>
+                <a href="#">Terms</a>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="footer-bottom">
+            © 2026 Zomato Clone Project | Made for learning purpose
+        </p>
+
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="delivery.js"></script>
+    <script src="filters.js"></script>
+
+</body>
+
+</html>

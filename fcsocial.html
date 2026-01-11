@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Details | Zomato</title>
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+
+<!-- BACK BUTTON -->
+<div class="back">
+    <a href="javascript:history.back()">⬅ Back</a>
+</div>
+
+<div class="booking-bar">
+ <a href="book.html">
+    <button onclick="openBooking()">Book a Table</button>
+    </a>
+    <button id="get-directions-btn" style="margin-left: 10px; padding: 10px 20px; background: #e23744; color: white; border: none; border-radius: 5px; cursor: pointer;">Get Directions</button>
+</div>
+
+
+<!-- MAIN INFO -->
+<section class="resto-header">
+    <h1>FC Road Social</h1>
+    <p>Fast Food - North Indian  • ₹1500 for two</p>
+</section>
+
+<!-- RATINGS & LOCATION -->
+<section class="resto-stats">
+    <div>
+        <h2>⭐ 4.5</h2>
+        <p>100 Reviews</p>
+    </div>
+    <div>
+        <h2>📍 Pune, FC Road, Shivaji Nagar</h2>
+        <p>Open: 12 PM - 1:30 AM</p>
+    </div>
+</section>
+<br>
+<!-- <center>
+  <div>
+        <h2>Sangamwadi</h2>
+       
+    </div> </center> -->
+
+<!-- PHOTO SHOWCASE -->
+<section class="resto-photos">
+    <img src="images/fcsocial.avif" alt="Restaurant Photo">
+    <img src="images/fc1.jpg" alt="Restaurant Photo">
+    <img src="images/fc2.jpg" alt="Restaurant Photo">
+    <img src="images/fc3.webp" alt="Restaurant Photo">
+        <img src="images/fc4.jpg" alt="Restaurant Photo">
+            <img src="images/fcsocial.avif" alt="Restaurant Photo">
+</section>
+
+<!-- MENU LIST -->
+<section class="resto-menu">
+    <h2>Menu</h2>
+
+    <div class="menu-item">
+        <span>North Indian</span> <span>₹3000</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Cocktails</span> <span>₹1000</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Italian</span> <span>₹4000</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Desserts</span> <span>₹4000</span>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="resto-reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="review">
+        <p><strong>Neha:</strong> Great ambience!</p>
+        <span>⭐ 4.3</span>
+    </div>
+
+    <div class="review">
+        <p><strong>Varun:</strong> Loved the Location!</p>
+        <span>⭐ 4.4</span>
+    </div>
+</section>
+
+<div id="bookingModal" class="booking-modal">
+    <div class="booking-box">
+        <h2>Book a Table</h2>
+
+        <input type="date" required>
+        <input type="time" required>
+
+        <select>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5+ Guests</option>
+        </select>
+
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <button onclick="confirmBooking()">Confirm Booking</button>
+        <p onclick="closeBooking()" class="close">Cancel</p>
+    </div>
+</div>
+
+
+<p id="info"><b>
+    Related to FC Road Social, Shivaji Nagar</b>
+    <br>
+Restaurants in Pune, Pune Restaurants, Shivaji Nagar restaurants, Best Shivaji Nagar restaurants, Deccan & Peths restaurants, Bar in Pune, Bar near me, Bar in Shivaji Nagar, Casual Dining in Pune, Casual Dining near me, Casual Dining in Shivaji Nagar, in Pune, near me, in Shivaji Nagar, Order food online in Shivaji Nagar, Order food online in Pune, New Year Parties in Pune, Christmas' Special in Pune
+<br><br>
+<b>Restaurants around Shivaji Nagar</b>
+<br>
+FC Road restaurants, JM Road restaurants, Model Colony restaurants, Shaniwar Peth restaurants
+<br><br>
+<b>Frequent searches leading to this page</b>
+<br>
+fc road social, social fc road, fc social, social fc road pune, fc road social menu
+Top Stores
+Viman Nagar, Dhole Patil Road, Mundhwa
+
+</p>
+
+<script src="directions.js"></script>
+</body>
+</html>

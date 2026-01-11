@@ -1,0 +1,44 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #fff;
+}
+
+.header {
+    background: #e23744;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px;
+}
+
+.box {
+    width: 220px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.logout {
+    text-align: center;
+}
+
+.logout a {
+    padding: 12px 25px;
+    background: #e23744;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

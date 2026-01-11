@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Manage Payments | Zomato Admin</title>
+    <link rel="stylesheet" href="restraurants.css">
+</head>
+
+<body>
+
+    <div class="topbar">
+        <h2>Zomato Admin - Payments</h2>
+        <a href="admin-dashboard.html">Back to Dashboard</a>
+    </div>
+
+    <div class="container">
+        <h3>Payment Records</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Amount</th>
+                    <th>Method</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="payments-table">
+                <!-- Dynamic content -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../storage.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const table = document.getElementById('payments-table');
+            function render() {
+                const list = db.getPayments();
+                table.innerHTML = '';
+                list.forEach(p => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                    <td>${p.id}</td>
+                    <td>₹${p.amount}</td>
+                    <td>${p.method}</td>
+                    <td class="open">${p.status}</td>
+                    <td>${p.date}</td>
+                `;
+                    table.appendChild(tr);
+                });
+            }
+            render();
+        });
+    </script>
+</body>
+
+</html>

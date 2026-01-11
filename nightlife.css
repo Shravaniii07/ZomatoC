@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TOP CATEGORIES */
+.top-categories {
+    display: flex;
+    gap: 40px;
+    padding: 20px 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+.top-categories .cat {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.top-categories .active {
+    color: #e23744;
+    font-weight: bold;
+}
+
+/* NIGHTLIFE FILTER BAR */
+.filters {
+    display: flex;
+    gap: 25px;
+    padding: 20px 60px;
+    border-bottom: 1px solid #eee;
+}
+
+.filters .filter {
+    padding: 10px 22px;
+    background: #f7f7f7;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.filters .filter.active {
+    background: #e23744;
+    color: white;
+}
+
+/* SECTION TITLE */
+.section-title {
+    padding: 20px 60px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* NIGHTLIFE CARDS */
+.venue-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 30px 60px;
+}
+
+.venue-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.venue-card:hover {
+    transform: scale(1.05);
+}
+
+.venue-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info {
+    padding: 15px;
+}
+
+.info span {
+    color: green;
+    font-weight: bold;
+}
+ a{
+    text-decoration: none;
+    color: black;
+ }
+
+ /* FOOTER */
+.zomato-footer {
+    background-color: #f8f8f8;
+    padding: 40px 80px;
+    color: #696969;
+    margin-top: 50px;
+}
+
+/* TOP PART */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    color: #e23744;
+    font-size: 32px;
+}
+
+.footer-buttons button {
+    margin-left: 15px;
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* LINKS SECTION */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    color: black;
+    font-size: 14px;
+}
+
+.footer-column a {
+    display: block;
+    margin-bottom: 8px;
+    color: #696969;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: #e23744;
+}
+
+/* BOTTOM TEXT */
+.footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* .filter-buttons{
+    background-color: white;
+    padding: 20px;
+      gap: 30px;
+}
+
+.filter-btn{
+    background-color: white;
+    border: 1px solid black;
+    height: 30px;
+    padding: 2px;
+    border-radius: 5px;
+    width: 150px;
+} */
+
+.filter-btn{
+        padding: 10px 22px;
+    background: #f7f7f7;
+    border-radius: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.filter-buttons{
+    padding: 20px;
+}
+
+.filter-buttons .filter-btn.active{
+    background-color:#e23744 ;
+    color: white;
+}
+
+#logout{
+    text-align: left;
+    color:#e23744;
+}
+

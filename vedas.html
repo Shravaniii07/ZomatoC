@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Details | Zomato</title>
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+
+
+<div class="back">
+    <a href="javascript:history.back()">⬅ Back</a>
+</div>
+
+<div class="booking-bar">
+<a href="book.html">
+    <button onclick="openBooking()">Book a Table</button>
+    </a>
+</div>
+
+
+
+<section class="resto-header">
+    <h1>Vedas</h1>
+    <p>North Indian - Chinese - Mughlai - Sea Food - Biryani - Dessert - Kebab - Beverages  • ₹1200 for two</p>
+</section>
+
+
+<section class="resto-stats">
+    <div>
+        <h2>⭐ 4.5</h2>
+        <p>190 Reviews</p>
+    </div>
+    <div>
+        <h2>📍 Pune, Akurdi</h2>
+        <p>Open: 10:30 AM - 12:00 Midnight</p>
+    </div>
+</section>
+<br>
+<!-- <center>
+  <div>
+        <h2>Sangamwadi</h2>
+       
+    </div> </center> -->
+
+<!-- PHOTO SHOWCASE -->
+<section class="resto-photos">
+    <img src="images/vedas.avif" alt="Restaurant Photo">
+    <img src="images/vedas1.avif" alt="Restaurant Photo">
+    <img src="images/vedas2.avif" alt="Restaurant Photo">
+    <img src="images/vedas4.avif" alt="Restaurant Photo">
+        <img src="images/vedas5.avif" alt="Restaurant Photo">
+            <img src="images/vedas3.jpg" alt="Restaurant Photo">
+            <img src="images/vedas6.avif" alt="Restaurant Photo">
+</section>
+
+<!-- MENU LIST -->
+<section class="resto-menu">
+    <h2>Menu</h2>
+
+    <div class="menu-item">
+        <span>Beverages</span> <span>₹300</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Chinese </span> <span>₹200</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Mughlai</span> <span>₹900</span>
+    </div>
+
+    <div class="menu-item">
+        <span>NorthIndian</span> <span>₹500</span>
+    </div>
+
+     <div class="menu-item">
+        <span>Dessert</span> <span>₹500</span>
+    </div>
+
+     <div class="menu-item">
+        <span>Kebab</span> <span>₹800</span>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="resto-reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="review">
+        <p><strong>Ishwari:</strong> Great ambience!</p>
+        <span>⭐ 4.3</span>
+    </div>
+
+    <div class="review">
+        <p><strong>Shravani:</strong> Loved the Food!</p>
+        <span>⭐ 4.2</span>
+    </div>
+</section>
+
+<div id="bookingModal" class="booking-modal">
+    <div class="booking-box">
+        <h2>Book a Table</h2>
+
+        <input type="date" required>
+        <input type="time" required>
+
+        <select>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5+ Guests</option>
+        </select>
+
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <button onclick="confirmBooking()">Confirm Booking</button>
+        <p onclick="closeBooking()" class="close">Cancel</p>
+    </div>
+</div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d967739.3304276998!2d72.561843378125!3d18.653593200000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9da5cbb3e47%3A0x44d5ee856b99d72c!2sVedas%20Family%20Restaurant%20%26%20bar!5e0!3m2!1sen!2sin!4v1767763479961!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+<p id="info"><b>Related to Vedas, Akurdi</b>
+    <br>
+Restaurants in Pune, Pune Restaurants, Akurdi restaurants, Best Akurdi restaurants, Pimpri Chinchwad Area restaurants, Casual Dining in Pune, Casual Dining near me, Casual Dining in Akurdi, in Pune, near me, in Akurdi, Order food online in Akurdi, Order food online in Pune, New Year Parties in Pune, Christmas' Special in Pune
+<br><br>
+<b>Restaurants around Akurdi</b>
+<br>
+Nigdi restaurants, Chinchwad restaurants, Ravet restaurants, Punawale restaurants
+<br><br>
+<b>Frequent searches leading to this page</b>
+<br>
+1, vedas akurdi, vedas photos, vedas restaurant pune, hotel vedas akurdi
+</p>
+
+</body>
+</html>

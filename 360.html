@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Details | Zomato</title>
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+
+<!-- BACK BUTTON -->
+<div class="back">
+    <a href="javascript:history.back()">⬅ Back</a>
+</div>
+
+<div class="booking-bar">
+   <a href="book.html"> <button onclick="openBooking()">Book a Table</button>
+    </a>
+</div>
+
+
+<!-- MAIN INFO -->
+<section class="resto-header">
+    <h1>360 Degree - The Revolving Fine Dine Restaurant</h1>
+    <p>Italian - North Indian  • ₹1400 for two</p>
+</section>
+
+<!-- RATINGS & LOCATION -->
+<section class="resto-stats">
+    <div>
+        <h2>⭐ 4.5</h2>
+        <p>100 Reviews</p>
+    </div>
+    <div>
+        <h2>📍 Pune, Deccan</h2>
+        <p>Open: 12 PM - 1:30 AM</p>
+    </div>
+</section>
+<br>
+<!-- <center>
+  <div>
+        <h2>Sangamwadi</h2>
+       
+    </div> </center> -->
+
+<!-- PHOTO SHOWCASE -->
+<section class="resto-photos">
+    <img src="images/360.avif" alt="Restaurant Photo">
+    <img src="images/3601.avif" alt="Restaurant Photo">
+    <img src="images/3604.avif" alt="Restaurant Photo">
+    <img src="images/3602.avif" alt="Restaurant Photo">
+        <img src="images/3603.avif" alt="Restaurant Photo">
+            <img src="images/360.avif" alt="Restaurant Photo">
+</section>
+
+<!-- MENU LIST -->
+<section class="resto-menu">
+    <h2>Menu</h2>
+
+    <div class="menu-item">
+        <span>North Indian</span> <span>₹3000</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Cocktails</span> <span>₹1000</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Italian</span> <span>₹4000</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Desserts</span> <span>₹4000</span>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="resto-reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="review">
+        <p><strong>Devansh:</strong> Great ambience!</p>
+        <span>⭐ 4.3</span>
+    </div>
+
+    <div class="review">
+        <p><strong>Varun:</strong> Loved the Location!</p>
+        <span>⭐ 4.4</span>
+    </div>
+</section>
+
+<div id="bookingModal" class="booking-modal">
+    <div class="booking-box">
+        <h2>Book a Table</h2>
+
+        <input type="date" required>
+        <input type="time" required>
+
+        <select>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5+ Guests</option>
+        </select>
+
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <button onclick="confirmBooking()">Confirm Booking</button>
+        <p onclick="closeBooking()" class="close">Cancel</p>
+    </div>
+</div>
+
+
+<p id="info"><b>
+    Related to 360 Degree</b>
+    <br> - The Revolving Fine Dine Restaurant, Deccan Gymkhana
+Restaurants in Bhosale-Shinde Arcade, JM Road, Restaurants in Pune, Pune Restaurants, Deccan Gymkhana restaurants, Best Deccan Gymkhana restaurants, Deccan & Peths restaurants, Bar in Pune, Bar near me, Bar in Deccan Gymkhana, Casual Dining in Pune, Casual Dining near me, Casual Dining in Deccan Gymkhana, in Pune, near me, in Deccan Gymkhana, Order food online in Deccan Gymkhana, Order food online in Pune, New Year Parties in Pune, Christmas' Special in Pune
+<br><br>
+<b>Restaurants around Deccan Gymkhana</b>
+Erandwane restaurants, Law College Road restaurants, Sadashiv Peth restaurants, FC Road restaurants
+<br><br><b>Frequent searches leading to this page</b><br>
+360 degree, 360 degree pune, 360 degree revolving restaurant pune maharashtra, 360 degree the lounge pune maharashtra, 360 degree revolving restaurant
+
+</p>
+
+</body>
+</html>

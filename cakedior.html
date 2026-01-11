@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pizza Hut — Order Online</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+<!-- RESTAURANT HEADER -->
+<div class="order-header">
+    <h1>Cake Dior</h1>
+    <p>Cakes </p>
+    <div class="stats">
+        <span class="rating">⭐ 4.4</span>
+        <span class="delivery-time">• 25 min</span>
+    </div>
+</div>
+
+<!-- SEARCH & CATEGORIES -->
+<div class="order-tools">
+    <input type="text" id="menu-search" placeholder="Search in menu..." oninput="filterMenu()">
+
+    <!-- <div class="menu-categories">
+        <div class="cat active" onclick="showCategory('all')">All</div>
+        <div class="cat" onclick="showCategory('exclusive')">Exclusive</div>
+        <div class="cat" onclick="showCategory('sourdough')">Sourdough</div>
+        <div class="cat" onclick="showCategory('pizzaMania')">Pizza Mania</div>
+        <div class="cat" onclick="showCategory('cheeseBurst')">Cheese Burst</div>
+    </div> -->
+</div>
+
+<!-- MENU -->
+<div class="menu-list" id="menuList">
+
+    <!-- Example Menu Item -->
+    <div class="menu-item" data-cat="exclusive">
+        <img src="images/strawberry.jpg">
+        <div class="details">
+            <h3>Strawberry Cake</h3>
+            <p>Delightful</p>
+            <span>₹299</span>
+        </div>
+        <button onclick="addToCart('Strawberry', 299)">Add</button>
+    </div>
+
+    <div class="menu-item" data-cat="sourdough">
+        <img src="images/cheesecake.jpg">
+        <div class="details">
+            <h3>Cheese Cake</h3>
+            <p>Cheese Cake, Biscuits</p>
+            <span>₹399</span>
+        </div>
+        <button onclick="addToCart('Cheese Cake', 399)">Add</button>
+    </div>
+
+
+    <div class="menu-item" data-cat="sourdough">
+        <img src="images/darkc.webp">
+        <div class="details">
+            <h3>Dark Choclate</h3>
+            <p>Dark flavour</p>
+            <span>₹399</span>
+        </div>
+        <button onclick="addToCart('Dark Choclate', 399)">Add</button>
+    </div>
+
+    <div class="menu-item" data-cat="sourdough">
+        <img src="images/redvelvet.jpg">
+        <div class="details">
+            <h3>Red Velvet</h3>
+            <p>Red Velvet</p>
+            <span>₹259</span>
+        </div>
+        <button onclick="addToCart('Red Velvet', 259)">Add</button>
+    </div>
+
+    <div class="menu-item" data-cat="sourdough">
+        <img src="images/cake.avif">
+        <div class="details">
+            <h3>White Choclate</h3>
+            <p>Milk flavour</p>
+            <span>₹200</span>
+        </div>
+        <button onclick="addToCart('White Choclate', 200)">Add</button>
+    </div>
+    
+</div>
+
+
+<div class="cart-summary">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p>Total: ₹<span id="cartTotal">0</span></p>
+    <button onclick="placeOrder()">Place Order</button>
+</div>
+
+<script src="data.js"></script>
+<script src="restaurant.js"></script>
+<script src="order.js"></script>
+</body>
+</html>

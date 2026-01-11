@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Details | Zomato</title>
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+
+<!-- BACK BUTTON -->
+<div class="back">
+    <a href="javascript:history.back()">⬅ Back</a>
+</div>
+
+<div class="booking-bar">
+<a href="book.html">
+<button onclick="openBooking()">Book a Table</button>
+</a>
+</div>
+
+
+<!-- MAIN INFO -->
+<section class="resto-header">
+    <h1>Kynd Cafe And Bar</h1>
+    <p>Continental - Desserts - Sushi - Fast Food - Bar Food  • ₹5000 for two</p>
+</section>
+
+<!-- RATINGS & LOCATION -->
+<section class="resto-stats">
+    <div>
+        <h2>⭐ 4.5</h2>
+        <p>190 Reviews</p>
+    </div>
+    <div>
+        <h2>📍 Pune, Snagamwadi</h2>
+        <p>Open: 11 AM - 11 PM</p>
+    </div>
+</section>
+<br>
+<!-- <center>
+  <div>
+        <h2>Sangamwadi</h2>
+       
+    </div> </center> -->
+
+<!-- PHOTO SHOWCASE -->
+<section class="resto-photos">
+    <img src="images/kynd.avif" alt="Restaurant Photo">
+    <img src="images/kynd1.avif" alt="Restaurant Photo">
+    <img src="images/kynd2.avif" alt="Restaurant Photo">
+    <img src="images/kynd3.avif" alt="Restaurant Photo">
+        <img src="images/kynd4.avif" alt="Restaurant Photo">
+            <img src="images/kynd.avif" alt="Restaurant Photo">
+</section>
+
+<!-- MENU LIST -->
+<section class="resto-menu">
+    <h2>Menu</h2>
+
+    <div class="menu-item">
+        <span>Sushi</span> <span>₹300</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Continental</span> <span>₹1200</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Momos</span> <span>₹500</span>
+    </div>
+
+    <div class="menu-item">
+        <span>NorthIndian</span> <span>₹4100</span>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="resto-reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="review">
+        <p><strong>Riya:</strong> Great ambience!</p>
+        <span>⭐ 4.4</span>
+    </div>
+
+    <div class="review">
+        <p><strong>Naitik:</strong> Loved the Location!</p>
+        <span>⭐ 4.5</span>
+    </div>
+</section>
+
+<div id="bookingModal" class="booking-modal">
+    <div class="booking-box">
+        <h2>Book a Table</h2>
+
+        <input type="date" required>
+        <input type="time" required>
+
+        <select>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5+ Guests</option>
+        </select>
+
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <button onclick="confirmBooking()">Confirm Booking</button>
+        <p onclick="closeBooking()" class="close">Cancel</p>
+    </div>
+</div>
+
+
+<p id="info"><b>Related to Kynd Cafe & Bar, Sangamvadi</b>
+    <br>
+Restaurants in Pune, Pune Restaurants, Sangamvadi restaurants, Best Sangamvadi restaurants, KP and Kalyani restaurants, Casual Dining in Pune, Casual Dining near me, Casual Dining in Sangamvadi, Bar in Pune, Bar near me, Bar in Sangamvadi, Order food online in Sangamvadi, Order food online in Pune, New Year Parties in Pune, Christmas' Special in Pune
+<br><br>
+<b>Restaurants around Sangamvadi</b>
+<br>
+Dhole Patil Road restaurants, Bund Garden Road restaurants, Koregaon Park restaurants, Camp Area restaurants
+<br><br><b>Frequent searches leading to this page
+    </b>
+kynd cafe & bar menu, kynd cafe & bar sangamvadi menu, kynd cafe & bar pune, kynd cafe & bar pune menu, kynd cafe & bar restaurant</p>
+
+</body>
+</html>

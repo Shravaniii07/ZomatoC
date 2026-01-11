@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Details | Zomato</title>
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+
+<!-- BACK BUTTON -->
+<div class="back">
+    <a href="javascript:history.back()">⬅ Back</a>
+</div>
+
+<div class="booking-bar">
+   <a href="book.html"> <button onclick="openBooking()">Book a Table</button>
+    </a>
+</div>
+
+
+<!-- MAIN INFO -->
+<section class="resto-header">
+    <h1>2 Kitchen And Bar</h1>
+    <p>North Indian - Chinese - Fast Food  • ₹1400 for two</p>
+</section>
+
+<!-- RATINGS & LOCATION -->
+<section class="resto-stats">
+    <div>
+        <h2>⭐ 4.4</h2>
+        <p>100 Reviews</p>
+    </div>
+    <div>
+        <h2>📍 Pune, NIBM Road</h2>
+        <p>Open: 12:00 PM – 1:30 AM</p>
+    </div>
+</section>
+<br>
+<center>
+  <div>
+        <h2>Clover Hills Plaza</h2>
+       
+    </div> </center>
+
+<!-- PHOTO SHOWCASE -->
+<section class="resto-photos">
+    <img src="images/2kitchen.jpg" alt="Restaurant Photo">
+    <img src="images/2ki.avif" alt="Restaurant Photo">
+    <img src="images/2kitchen1.avif" alt="Restaurant Photo">
+    <img src="images/2kitchen.jpg" alt="Restaurant Photo">
+        <img src="images/2kitche3.avif" alt="Restaurant Photo">
+            <img src="images/2ki.avif" alt="Restaurant Photo">
+</section>
+
+<!-- MENU LIST -->
+<section class="resto-menu">
+    <h2>Menu</h2>
+
+    <div class="menu-item">
+        <span>Pizza</span> <span>₹540</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Dessert</span> <span>₹890</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Butter Chicken</span> <span>₹400</span>
+    </div>
+
+    <div class="menu-item">
+        <span>Butter Panner</span> <span>₹400</span>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="resto-reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="review">
+        <p><strong>Naina:</strong> Great food and quick service!</p>
+        <span>⭐ 4.0</span>
+    </div>
+
+    <div class="review">
+        <p><strong>Shreyy:</strong> Loved the ambience and flavours!</p>
+        <span>⭐ 4.1</span>
+    </div>
+</section>
+
+<div id="bookingModal" class="booking-modal">
+    <div class="booking-box">
+        <h2>Book a Table</h2>
+
+        <input type="date" required>
+        <input type="time" required>
+
+        <select>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5+ Guests</option>
+        </select>
+
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <button onclick="confirmBooking()">Confirm Booking</button>
+        <p onclick="closeBooking()" class="close">Cancel</p>
+    </div>
+</div>
+
+
+<p id="info"><b>Related to 2 Kitchens & Bar, NIBM Road</b><br>
+Restaurants in Pune, Pune Restaurants, NIBM Road restaurants, Best NIBM Road restaurants, Wanowrie Kondhwa Area restaurants, Casual Dining in Pune, Casual Dining near me, Casual Dining in NIBM Road, Bar in Pune, Bar near me, Bar in NIBM Road, New Year Parties in Pune, Christmas' Special in Pune
+Restaurants around NIBM Road
+<br>
+Kondhwa restaurants, Undri restaurants, Salunkhe Vihar Road restaurants, Yewale Wadi restaurants
+Frequent searches leading to this page<br>
+2 kitchens & bar menu, 2 kitchens & bar nibm road menu, 2 kitchens & bar pune, 2 kitchens & bar pune menu, 2 kitchens & bar restaurant</p>
+
+</body>
+</html>

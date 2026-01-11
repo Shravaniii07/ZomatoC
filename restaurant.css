@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BACK BUTTON */
+.back {
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+.back a {
+    text-decoration: none;
+    color: #e23744;
+}
+
+/* HEADER */
+.resto-header {
+    text-align: center;
+    padding: 20px;
+}
+
+.resto-header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.resto-header p {
+    color: gray;
+    font-size: 18px;
+}
+
+/* STATS */
+.resto-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 40px;
+    background: #f8f8f8;
+}
+
+.resto-stats h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.resto-stats p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* PHOTOS */
+.resto-photos {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 20px;
+}
+
+.resto-photos img {
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* MENU */
+.resto-menu {
+    padding: 20px 40px;
+}
+
+.resto-menu h2 {
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+}
+
+/* REVIEWS */
+.resto-reviews {
+    padding: 20px 40px;
+}
+
+.resto-reviews h2 {
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.review {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+}
+
+.review span {
+    color: gold;
+    font-weight: bold;
+}
+
+/* BOOKING BUTTON */
+.booking-bar {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.booking-bar button {
+    padding: 15px 40px;
+    background: #e23744;
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* MODAL */
+.booking-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.booking-box {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.booking-box h2 {
+    margin-bottom: 20px;
+}
+
+.booking-box input,
+.booking-box select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.booking-box button {
+    width: 100%;
+    padding: 12px;
+    background: #e23744;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+.close {
+    margin-top: 15px;
+    color: gray;
+    cursor: pointer;
+}
+
+#info{
+    /* text-align: center; */
+    padding: 45px;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pizza Hut — Order Online</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+<!-- RESTAURANT HEADER -->
+<div class="order-header">
+    <h1>Taco Bell</h1>
+    <p>Pizza, Fast Food • ₹250 for one</p>
+    <div class="stats">
+        <span class="rating">⭐ 4.2</span>
+        <span class="delivery-time">• 25 min</span>
+    </div>
+</div>
+
+<!-- SEARCH & CATEGORIES -->
+<div class="order-tools">
+    <input type="text" id="menu-search" placeholder="Search in menu..." oninput="filterMenu()">
+
+    <!-- <div class="menu-categories">
+        <div class="cat active" onclick="showCategory('all')">All</div>
+        <div class="cat" onclick="showCategory('exclusive')">Exclusive</div>
+        <div class="cat" onclick="showCategory('sourdough')">Sourdough</div>
+        <div class="cat" onclick="showCategory('pizzaMania')">Pizza Mania</div>
+        <div class="cat" onclick="showCategory('cheeseBurst')">Cheese Burst</div>
+    </div> -->
+</div>
+
+<!-- MENU -->
+<div class="menu-list" id="menuList">
+
+    <!-- Example Menu Item -->
+    <div class="menu-item" data-cat="exclusive">
+        <img src="images/taco.jpg">
+        <div class="details">
+            <h3>Classic Mexican Taco</h3>
+            <p>Delightful combination of Classic Mexican style</p>
+            <span>₹499</span>
+        </div>
+        <button onclick="addToCart('Mexican Taco', 499)">Add</button>
+    </div>
+
+    <div class="menu-item" data-cat="sourdough">
+        <img src="images/tacowrap.jpg">
+        <div class="details">
+            <h3>Taco Style Wrap</h3>
+            <p>Wrap,Vegies</p>
+            <span>₹399</span>
+        </div>
+        <button onclick="addToCart('Taco Wrap', 399)">Add</button>
+    </div>
+
+
+    <div class="menu-item" data-cat="sourdough">
+        <img src="images/tacobell.avif">
+        <div class="details">
+            <h3>Taco Bell Combo</h3>
+            <p>Gourment Style</p>
+            <span>₹699</span>
+        </div>
+        <button onclick="addToCart('Combo', 699)">Add</button>
+    </div>
+
+    <div class="menu-item" data-cat="sourdough">
+        <img src="images/catina.jpg">
+        <div class="details">
+            <h3>Catina Chicken Bowl</h3>
+            <p>Vegies Chicken Bowl</p>
+            <span>₹259</span>
+        </div>
+        <button onclick="addToCart('Catina Bowl', 259)">Add</button>
+    </div>
+
+    <div class="menu-item" data-cat="sourdough">
+        <img src="images/bajablast.jpg">
+        <div class="details">
+            <h3>Baja Blast</h3>
+            <p>Classic Moutain Dew</p>
+            <span>₹200</span>
+        </div>
+        <button onclick="addToCart('Baja Blast', 200)">Add</button>
+    </div>
+    
+</div>
+
+
+<div class="cart-summary">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p>Total: ₹<span id="cartTotal">0</span></p>
+    <button onclick="placeOrder()">Place Order</button>
+</div>
+
+<script src="data.js"></script>
+<script src="restaurant.js"></script>
+<script src="order.js"></script>
+</body>
+</html>
