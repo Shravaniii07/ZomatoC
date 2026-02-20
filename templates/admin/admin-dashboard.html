@@ -1,0 +1,86 @@
+{% extends "admin/admin_base.html" %}
+
+{% block title %}Dashboard | Zomato Admin{% endblock %}
+{% block page_title %}Overview{% endblock %}
+
+{% set active_page = "dashboard" %}
+
+{% block content %}
+<div class="stats-grid">
+    <!-- RESTAURANTS CARD -->
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="fa-solid fa-utensils"></i>
+        </div>
+        <div class="stat-info">
+            <h3>Total Restaurants</h3>
+            <div class="value">15</div>
+        </div>
+    </div>
+
+    <!-- ORDERS CARD -->
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="fa-solid fa-box-open"></i>
+        </div>
+        <div class="stat-info">
+            <h3>Total Orders</h3>
+            <div class="value">120</div>
+        </div>
+    </div>
+
+    <!-- USERS CARD -->
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="fa-solid fa-users"></i>
+        </div>
+        <div class="stat-info">
+            <h3>Total Users</h3>
+            <div class="value">240</div>
+        </div>
+    </div>
+
+    <!-- BOOKINGS CARD -->
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="fa-solid fa-calendar-check"></i>
+        </div>
+        <div class="stat-info">
+            <h3>Table Bookings</h3>
+            <div class="value">18</div>
+        </div>
+    </div>
+</div>
+
+<!-- RECENT ACTIVITY SECTION (New Addition for "Interesting" factor) -->
+<div class="table-container">
+    <h3 style="margin-bottom: 20px;">Recent Orders</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>User</th>
+                <th>Restaurant</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#ORD-001</td>
+                <td>Varun</td>
+                <td>Pizza Hut</td>
+                <td>$45.00</td>
+                <td><span style="color: green;">Delivered</span></td>
+            </tr>
+            <tr>
+                <td>#ORD-002</td>
+                <td>Shravani</td>
+                <td>Burger King</td>
+                <td>$22.50</td>
+                <td><span style="color: orange;">Pending</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

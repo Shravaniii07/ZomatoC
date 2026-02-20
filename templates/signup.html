@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up | Zomato{% endblock %}
+
+{% block navbar %}
+<!-- TRANSPARENT NAVBAR -->
+<nav class="navbar">
+    <a href="{{ url_for('index') }}" class="brand-logo">zomato</a>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="auth-hero">
+    <video autoplay loop muted playsinline class="hero-video">
+        <source src="{{ url_for('static', filename='images/startingfoodvideo.mp4') }}" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="auth-card glass-card">
+        <h2>Sign Up</h2>
+
+        <div class="input-group">
+            <input id="signup-name" type="text" placeholder="Full Name">
+        </div>
+
+        <div class="input-group">
+            <input id="signup-email" type="email" placeholder="Email">
+        </div>
+
+        <div class="input-group">
+            <input id="signup-password" type="password" placeholder="Password">
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="terms">
+            <label for="terms">I agree to Zomato's <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a> and
+                <a href="#">Content Policies</a></label>
+        </div>
+
+        <button id="signup-btn" class="auth-btn">Create account</button>
+
+        <div class="divider">
+            <span>OR</span>
+        </div>
+
+        <button id="google-signup-btn" class="google-btn">
+            <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google">
+            Sign in with Google
+        </button>
+
+        <p class="auth-text">Already have an account? <a href="{{ url_for('login') }}">Log in</a></p>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+<script src="{{ url_for('static', filename='js/auth_logic.js') }}"></script>
+{% endblock %}

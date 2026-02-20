@@ -1,0 +1,72 @@
+{% extends "admin/admin_base.html" %}
+
+{% block title %}Payments | Zomato Admin{% endblock %}
+{% block page_title %}Transaction History{% endblock %}
+
+{% set active_page = "payments" %}
+
+{% block content %}
+<div class="table-container">
+    <h3 style="margin-bottom: 20px;">Payment Records</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Amount</th>
+                <th>Method</th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody id="payments-table">
+            <!-- Dynamic content -->
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const table = document.getElementById('payments-table');
+        function render() {
+            const list = db.getPayments();
+
+            // Fallback for demo if empty
+            if (list.length === 0) {
+                const demoData = [
+                    { id: 'TXN_998877', amount: 450, method: 'UPI', status: 'Success', date: '2025-01-10' },
+                    { id: 'TXN_112233', amount: 1200, method: 'Card', status: 'Success', date: '2025-01-09' }
+                ];
+                demoData.forEach(p => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                    <td>${p.id}</td>
+                    <td>₹${p.amount}</td>
+                    <td>${p.method}</td>
+                    <td><span style="color: green; font-weight: 600;">${p.status}</span></td>
+                    <td>${p.date}</td>
+                    `;
+                    table.appendChild(tr);
+                });
+                return;
+            }
+
+            table.innerHTML = '';
+            list.forEach(p => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                <td>${p.id}</td>
+                <td>₹${p.amount}</td>
+                <td>${p.method}</td>
+                <td><span style="color: green; font-weight: 600;">${p.status}</span></td>
+                <td>${p.date}</td>
+            `;
+                table.appendChild(tr);
+            });
+        }
+        render();
+    });
+</script>
+{% endblock %}

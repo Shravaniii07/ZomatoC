@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}{{ restaurant.name }} | Zomato{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/order.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- HERO HEADER -->
+<div class="order-header-wrapper">
+    <div class="order-header-content">
+        <div class="clearfix" style="display:flex; justify-content:space-between; align-items:flex-end;">
+            <div>
+                <h1>{{ restaurant.name }}</h1>
+                <div class="order-meta">
+                    <span class="rating-badge">{{ restaurant.rating }} ★</span>
+                    <span>{{ restaurant.cuisine }}</span>
+                    <span>•</span>
+                    <span>₹{{ restaurant.price }} for two</span>
+                    <span>•</span>
+                    <span>30 min</span>
+                </div>
+            </div>
+            <!-- Optional: Add Favorite/Share buttons here later -->
+        </div>
+    </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="order-container">
+
+    <!-- LEFT: MENU SECTION -->
+    <div class="menu-section">
+        <div class="search-bar-wrapper">
+            <input type="text" id="menu-search" placeholder="Search for dishes..." oninput="filterMenu()">
+        </div>
+
+        <div class="menu-list" id="menuList">
+            {% for item in menu %}
+            <div class="menu-item">
+                <!-- IMAGE & ADD BTN -->
+                <div class="menu-image">
+                    <img src="{{ url_for('static', filename=item.image) }}" alt="{{ item.name }}"
+                        data-fallback="{{ url_for('static', filename='images/food-placeholder.jpg') }}"
+                        onerror="this.src=this.dataset.fallback;">
+                    <button class="btn-add-overlay" data-name="{{ item.name }}" data-price="{{ item.price }}"
+                        onclick="addToCart(this.getAttribute('data-name'), parseFloat(this.getAttribute('data-price')))">
+                        ADD
+                    </button>
+                </div>
+
+                <!-- INFO -->
+                <div class="item-info">
+                    <h3>{{ item.name }}</h3>
+                    <div class="item-price">₹{{ item.price }}</div>
+                    <p class="item-desc">{{ item.description }}</p>
+                    <div style="margin-top:10px;">
+                        <span style="color:#f5d10d;">★★★★☆</span>
+                        <span style="font-size:12px; color:#999; margin-left:5px;">(48 votes)</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- RIGHT: CART SECTION -->
+    <aside class="cart-section">
+        <h2>Cart</h2>
+        <div id="cart-empty-msg" style="text-align:center; color:#999; margin: 20px 0;">
+            <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
+                style="width:100%; max-width:150px; opacity:0.5; margin-bottom:10px;">
+            <p>Your cart is empty</p>
+        </div>
+
+        <ul id="cartItems">
+            <!-- Items injected by JS -->
+        </ul>
+
+        <div class="cart-total-box">
+            <div class="total-row">
+                <span>Subtotal</span>
+                <span>₹<span id="cartTotal">0</span></span>
+            </div>
+            <p style="font-size:12px; color:#888; margin-bottom:15px;">Extra charges may apply</p>
+            <button class="btn-checkout" onclick="placeOrder()">Checkout</button>
+        </div>
+    </aside>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/cart.js') }}"></script>
+{% endblock %}

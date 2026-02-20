@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Admin Portal | Zomato{% endblock %}</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+
+<body>
+
+    <div class="admin-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Zomato<span>Admin</span></h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="admin-dashboard.html" class="nav-item {% if active_page == 'dashboard' %}active{% endif %}">
+                    <i class="fa-solid fa-grid-2"></i> Dashboard
+                </a>
+                <a href="restraurants.html" class="nav-item {% if active_page == 'restaurants' %}active{% endif %}">
+                    <i class="fa-solid fa-utensils"></i> Restaurants
+                </a>
+                <a href="orders.html" class="nav-item {% if active_page == 'orders' %}active{% endif %}">
+                    <i class="fa-solid fa-box-open"></i> Orders
+                </a>
+                <a href="bookings.html" class="nav-item {% if active_page == 'bookings' %}active{% endif %}">
+                    <i class="fa-solid fa-chair"></i> Bookings
+                </a>
+                <a href="user.html" class="nav-item {% if active_page == 'users' %}active{% endif %}">
+                    <i class="fa-solid fa-users"></i> Users
+                </a>
+                <a href="payments_admin.html" class="nav-item {% if active_page == 'payments' %}active{% endif %}">
+                    <i class="fa-solid fa-credit-card"></i> Payments
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="{{ url_for('login') }}" class="logout-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="page-title">
+                    <h1>{% block page_title %}Dashboard{% endblock %}</h1>
+                </div>
+                <div class="admin-profile">
+                    <span>Admin User</span>
+                    <div class="avatar">A</div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+    </div>
+
+    <!-- SCRIPTS -->
+    {% block scripts %}{% endblock %}
+
+</body>
+
+</html>

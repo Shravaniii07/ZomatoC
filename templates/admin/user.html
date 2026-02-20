@@ -1,0 +1,64 @@
+{% extends "admin/admin_base.html" %}
+
+{% block title %}Users | Zomato Admin{% endblock %}
+{% block page_title %}Manage Users{% endblock %}
+
+{% set active_page = "users" %}
+
+{% block content %}
+<div class="table-container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h3>Registered Users</h3>
+        <button class="btn-action"
+            style="background: var(--primary); color: white; border: none; padding: 10px 20px; cursor: pointer;">
+            <i class="fa-solid fa-plus"></i> Add User
+        </button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Most Recent Order</th>
+                <th>Favorite Restaurant</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>D903</td>
+                <td>Varun</td>
+                <td>Desserts</td>
+                <td>Kiki Pune</td>
+                <td>Pune</td>
+            </tr>
+            <tr>
+                <td>G654</td>
+                <td>Neha</td>
+                <td>North Indian</td>
+                <td>Govind Garden</td>
+                <td>Pimple Saudagar</td>
+            </tr>
+            <tr>
+                <td>U112</td>
+                <td>Shravani</td>
+                <td>Pizza, Pasta</td>
+                <td>Pizza Hut</td>
+                <td>Mumbai</td>
+            </tr>
+            <tr>
+                <td>U205</td>
+                <td>Naitik</td>
+                <td>Biryani</td>
+                <td>Behrouz</td>
+                <td>Bangalore</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<!-- No specific script for user management yet, using static display as per original file -->
+{% endblock %}

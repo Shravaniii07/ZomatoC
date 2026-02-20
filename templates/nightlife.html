@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Nightlife | Zomato{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/nightlife.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- TOP CATEGORY BAR -->
+<div class="top-categories">
+    <a href="{{ url_for('delivery') }}">
+        <div class="cat">Delivery</div>
+    </a>
+    <a href="{{ url_for('dining') }}">
+        <div class="cat">Dining Out</div>
+    </a>
+    <a href="{{ url_for('nightlife') }}">
+        <div class="cat active">Nightlife</div>
+    </a>
+</div>
+
+<div class="container" style="width: 100%; margin: 0 auto; padding: 20px;">
+
+    <!-- STICKY FILTER BAR -->
+    <div class="filter-buttons sticky-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="rating4">Rating 4.0+</button>
+        <button class="filter-btn" data-filter="opennow">Open Now</button>
+        <button class="filter-btn" data-filter="pricelow">Price Low to High</button>
+    </div>
+
+    <!-- RESTAURANT GRID -->
+    <h2 class="section-title">Nightlife & Drinks in Pune</h2>
+
+    <div class="restaurant-list grid-view">
+        {% for r in restaurants %}
+        <div class="restaurant-card" data-rating="{{ r.rating }}" data-open="{{ 'true' if r.open else 'false' }}"
+            data-price="{{ r.price }}">
+            <a href="{{ url_for('restaurant_detail', id=r.id) }}">
+                <div class="card-img">
+                    <img src="{{ url_for('static', filename=r.image) }}" alt="{{ r.name }}">
+                </div>
+                <div class="info">
+                    <div class="row">
+                        <h3>{{ r.name }}</h3>
+                        <span class="rating-badge">{{ r.rating }} ★</span>
+                    </div>
+                    <div class="row">
+                        <p>{{ r.cuisine }}</p>
+                        <p class="price">₹{{ r.price }} for two</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/filters.js') }}"></script>
+{% endblock %}

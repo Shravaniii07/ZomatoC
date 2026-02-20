@@ -1,0 +1,69 @@
+{% extends "admin/admin_base.html" %}
+
+{% block title %}Orders | Zomato Admin{% endblock %}
+{% block page_title %}Manage Orders{% endblock %}
+
+{% set active_page = "orders" %}
+
+{% block content %}
+<div class="table-container">
+    <h3 style="margin-bottom: 20px;">Current Orders</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Items</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="orders-table">
+            <!-- Dynamic content loaded via JS -->
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const table = document.getElementById('orders-table');
+        function render() {
+            const orders = db.getOrders();
+            table.innerHTML = '';
+            orders.forEach(order => {
+                let statusColor = 'orange';
+                if (order.status === 'Delivered') statusColor = 'green';
+                if (order.status === 'Cancelled') statusColor = 'red';
+
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                <td><span style="font-weight:600;">#${order.id}</span></td>
+                <td>${order.items.map(i => i.name).join(', ') || 'N/A'}</td>
+                <td>₹${order.total}</td>
+                <td><span style="color: ${statusColor}; font-weight: 600;">${order.status}</span></td>
+                <td>${order.date}</td>
+                <td>
+                    <button class="btn-circle-icon btn-edit" onclick="updateStatus('${order.id}')" title="Update Status"><i class="fa-solid fa-pen"></i></button>
+                </td>
+            `;
+                table.appendChild(tr);
+            });
+        }
+        window.updateStatus = (id) => {
+            const orders = db.getOrders();
+            const order = orders.find(o => o.id === id);
+            const status = prompt('Enter new status (Placed/Delivered/Cancelled):', order.status);
+            if (status) {
+                order.status = status;
+                db.setData(STORAGE_KEYS.ORDERS, orders);
+                render();
+            }
+        };
+        render();
+    });
+</script>
+{% endblock %}

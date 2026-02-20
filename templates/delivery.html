@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Delivery | Zomato{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/delivery.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- TOP CATEGORY BAR -->
+<div class="top-categories">
+    <a href="{{ url_for('delivery') }}">
+        <div class="cat active">Delivery</div>
+    </a>
+    <a href="{{ url_for('dining') }}">
+        <div class="cat">Dining Out</div>
+    </a>
+    <a href="{{ url_for('nightlife') }}">
+        <div class="cat">Nightlife</div>
+    </a>
+</div>
+
+<!-- CONTAINER FOR CONTENT -->
+<div class="container" style="width: 100%; margin: 0 auto; padding: 20px;">
+
+    <!-- INSPIRATION SECTION -->
+    <h2 class="section-title">Inspiration for your first order</h2>
+    <div class="food-categories">
+        {% set categories = [
+        ('Pizza', 'pizza.jpg'), ('Biryani', 'biryani.avif'), ('North Indian', 'North.jpg'),
+        ('Chicken', 'kfc.webp'), ('Burger', 'burger.jpg'), ('Chinese', 'chinese.avif'),
+        ('Rolls', 'rolls.avif'), ('Cake', 'cake.avif'), ('Sandwich', 'sandwhich.jpg'),
+        ('Taco', 'taco.jpg')
+        ] %}
+        {% for name, img in categories %}
+        <div class="food-card" data-category="{{ name }}">
+            <img src="{{ url_for('static', filename='images/' + img) }}" alt="{{ name }}">
+            <p>{{ name }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- STICKY FILTER BAR -->
+    <div class="filter-buttons sticky-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="rating4">Rating 4.0+</button>
+        <button class="filter-btn" data-filter="pureveg">Pure Veg</button>
+        <button class="filter-btn" data-filter="opennow">Open Now</button>
+        <button class="filter-btn" data-filter="pricelow">Price Low to High</button>
+    </div>
+
+    <!-- RESTAURANT GRID -->
+    <h2 class="section-title">Delivery Restaurants in Pune</h2>
+    <div class="restaurant-list grid-view">
+        {% for r in restaurants %}
+        <div class="restaurant-card" data-rating="{{ r.rating }}" data-category="{{ r.category }}"
+            data-price="{{ r.price }}">
+            <a href="{{ url_for('restaurant_detail', id=r.id) }}">
+                <div class="card-img">
+                    <img src="{{ url_for('static', filename=r.image) }}" alt="{{ r.name }}">
+                    <div class="delivery-time">30 mins</div>
+                </div>
+                <div class="info">
+                    <div class="row">
+                        <h3>{{ r.name }}</h3>
+                        <span class="rating-badge">{{ r.rating }} ★</span>
+                    </div>
+                    <div class="row">
+                        <p>{{ r.cuisine }}</p>
+                        <p class="price">₹{{ r.price }} for one</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/delivery.js') }}"></script>
+<script src="{{ url_for('static', filename='js/filters.js') }}"></script>
+{% endblock %}

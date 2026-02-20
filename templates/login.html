@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Login | Zomato{% endblock %}
+
+{% block navbar %}
+<!-- TRANSPARENT NAVBAR FOR LOGIN -->
+<nav class="navbar">
+    <a href="{{ url_for('index') }}" class="brand-logo">zomato</a>
+</nav>
+{% endblock %}
+
+{% block content %}
+<!-- VIDEO BACKGROUND & OVERLAY -->
+<div class="auth-hero">
+    <video autoplay loop muted playsinline class="hero-video">
+        <source src="{{ url_for('static', filename='images/startingfoodvideo.mp4') }}" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <!-- GLASSMORPHIC LOGIN CARD -->
+    <div class="auth-card glass-card">
+        <h2>Login</h2>
+
+        <div class="input-group">
+            <input type="text" id="login-identifier" placeholder="Phone or Email">
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="login-password" placeholder="Password">
+        </div>
+
+        <button id="login-btn" class="auth-btn">Login</button>
+
+        <div class="divider">
+            <span>OR</span>
+        </div>
+
+        <button id="google-login-btn" class="google-btn">
+            <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google">
+            Continue with Google
+        </button>
+
+        <p class="auth-text">New to Zomato? <a href="{{ url_for('signup') }}">Create account</a></p>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+<script src="{{ url_for('static', filename='js/auth_logic.js') }}"></script>
+{% endblock %}

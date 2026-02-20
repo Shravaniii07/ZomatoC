@@ -1,0 +1,85 @@
+{% extends "admin/admin_base.html" %}
+
+{% block title %}Bookings | Zomato Admin{% endblock %}
+{% block page_title %}Table Bookings{% endblock %}
+
+{% set active_page = "bookings" %}
+
+{% block content %}
+<div class="table-container">
+    <h3 style="margin-bottom: 20px;">Upcoming Reservations</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Booking ID</th>
+                <th>User</th>
+                <th>Guests</th>
+                <th>Time</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="bookings-table">
+            <!-- Dynamic content -->
+        </tbody>
+        <!-- Keeping static data for demo if JS fails or is empty, but JS will likely overwrite -->
+    </table>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const table = document.getElementById('bookings-table');
+        function render() {
+            const list = db.getBookings();
+
+            // If empty, show static demo data just so it looks populated for the user
+            if (list.length === 0) {
+                const demoData = [
+                    { id: 'A563', user: 'Naitik', guests: 5, time: '8:00 PM' },
+                    { id: 'D903', user: 'Varun', guests: 2, time: '9:00 PM' },
+                    { id: 'R413', user: 'Priya', guests: 4, time: '8:00 PM' }
+                ];
+                demoData.forEach(item => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                    <td>${item.id}</td>
+                    <td>${item.user}</td>
+                    <td>${item.guests} Guests</td>
+                    <td>${item.time}</td>
+                    <td>
+                        <button class="btn-circle-icon btn-delete" title="Cancel Booking"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                    `;
+                    table.appendChild(tr);
+                });
+                return;
+            }
+
+            table.innerHTML = '';
+            list.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                <td>${item.id}</td>
+                <td>${item.user || 'Guest'}</td>
+                <td>${item.guests || 2} Guests</td>
+                <td>${item.time || 'Default'}</td>
+                <td>
+                    <button class="btn-circle-icon btn-delete" onclick="deleteBooking('${item.id}')" title="Cancel Booking"><i class="fa-solid fa-trash"></i></button>
+                </td>
+            `;
+                table.appendChild(tr);
+            });
+        }
+        window.deleteBooking = (id) => {
+            if (confirm('Cancel booking?')) {
+                const list = db.getBookings().filter(b => b.id !== id);
+                db.setData(STORAGE_KEYS.BOOKINGS, list);
+                render();
+            }
+        };
+        render();
+    });
+</script>
+{% endblock %}

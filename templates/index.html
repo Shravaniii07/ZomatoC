@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Zomato | Discover the best food{% endblock %}
+
+{% block navbar %}
+<!-- TRANSPARENT HERO NAVBAR -->
+<nav class="navbar">
+    <a href="{{ url_for('index') }}" class="brand-logo" style="color: #E23744 !important;">zomato</a>
+    <div class="nav-links">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('signup') }}">Sign Up</a>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <!-- VIDEO BACKGROUND -->
+    <video autoplay loop muted playsinline class="hero-video">
+        <source src="{{ url_for('static', filename='images/startingfoodvideo.mp4') }}" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>Discover the best food & drinks in your city</h1>
+
+        <!-- SEARCH BOX -->
+        <div class="search-box">
+            <select id="citySelect">
+                <option>Pune</option>
+                <option>Mumbai</option>
+                <option>Delhi</option>
+            </select>
+            <input type="text" id="searchInput" placeholder="Search for restaurant, cuisine or a dish">
+        </div>
+    </div>
+</div>
+
+<!-- OPTIONS CARDS -->
+<div class="options">
+
+    <div class="option-card">
+        <a href="{{ url_for('delivery') }}">
+            <img src="{{ url_for('static', filename='images/online.avif') }}">
+            <div class="card-content">
+                <h3>Order Online</h3>
+                <p>Stay home and order to your doorstep</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="option-card">
+        <a href="{{ url_for('dining') }}">
+            <img src="{{ url_for('static', filename='images/dining.webp') }}">
+            <div class="card-content">
+                <h3>Dining</h3>
+                <p>View the city’s favourite dining venues</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="option-card">
+        <a href="{{ url_for('nightlife') }}">
+            <img src="{{ url_for('static', filename='images/nightlife.webp') }}">
+            <div class="card-content">
+                <h3>Nightlife & Clubs</h3>
+                <p>Explore the city’s top nightlife outlets</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+{% endblock %}

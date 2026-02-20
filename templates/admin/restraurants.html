@@ -1,0 +1,61 @@
+{% extends "admin/admin_base.html" %}
+
+{% block title %}Restaurants | Zomato Admin{% endblock %}
+{% block page_title %}Manage Restaurants{% endblock %}
+
+{% set active_page = "restaurants" %}
+
+{% block content %}
+<div class="table-container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h3>All Restaurants</h3>
+        <button class="btn-action"
+            style="background: var(--primary); color: white; border: none; padding: 10px 20px; cursor: pointer;">
+            <i class="fa-solid fa-plus"></i> Add New
+        </button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Location</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Dominos Pizza</td>
+                <td>Delivery</td>
+                <td>Pune</td>
+                <td><span style="color: green; font-weight: 600;">Open</span></td>
+                <td>
+                    <button class="btn-circle-icon btn-edit"><i class="fa-solid fa-pen"></i> Edit</button>
+                    <button class="btn-circle-icon btn-delete"><i class="fa-solid fa-trash"></i> Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Kiki Restaurant</td>
+                <td>Dining</td>
+                <td>Pune</td>
+                <td><span style="color: red; font-weight: 600;">Closed</span></td>
+                <td>
+                    <button class="btn-circle-icon btn-edit"><i class="fa-solid fa-pen"></i> Edit</button>
+                    <button class="btn-circle-icon btn-delete"><i class="fa-solid fa-trash"></i> Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/data.js') }}"></script>
+<script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+<script src="{{ url_for('static', filename='js/admin_logic.js') }}"></script>
+{% endblock %}
