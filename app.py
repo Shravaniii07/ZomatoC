@@ -58,5 +58,7 @@ def serve_user_html(filename):
 def serve_admin_html(filename):
     return render_template(f'admin/{filename}')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
